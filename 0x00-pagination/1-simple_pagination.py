@@ -54,10 +54,8 @@ class Server:
         Returns:
             list: The page of the dataset.
         """
-        assert isinstance(page, int) and isinstance(page_size, int),
-        "Page and page_size must be integers"
-        assert page > 0 and page_size > 0,
-        "Page and page_size must be greater than 0"
+        assert isinstance(page, int) and isinstance(page_size, int), "Pages"
+        assert page > 0 and page_size > 0, "Page and page_size "
 
         dataset = self.dataset()
         start_index, end_index = self.index_range(page, page_size)
