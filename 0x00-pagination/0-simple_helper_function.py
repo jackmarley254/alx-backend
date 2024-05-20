@@ -4,7 +4,7 @@ page and page_size."""
 from typing import Tuple
 
 
-def function(page: int, page_size: int) -> Tuple[int, int]:
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
     Calculate the start and end indices of a range given a page number
     and page size.
