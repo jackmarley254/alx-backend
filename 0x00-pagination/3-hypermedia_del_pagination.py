@@ -67,7 +67,8 @@ class Server:
             # next_index to the current index
             prev_page_next_index = index - page_size
             if prev_page_next_index < 0:
-                # If the previous page is out of range, return an empty dictionary
+                # If the previous page is out of range, return an empty
+                # dictionary
                 return {}
         return {
             "index": index,
