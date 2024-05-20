@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Contains class with methods to create simple pagination from csv data
+"""
 import math
 import csv
 from typing import List, Tuple
