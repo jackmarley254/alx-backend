@@ -5,7 +5,7 @@ Deletion-resilient hypermedia pagination
 
 import csv
 import math
-from typing import List
+from typing import List, Dict
 
 
 class Server:
@@ -66,3 +66,12 @@ class Server:
             # If not the first page, return the items from the previous page's
             # next_index to the current index
             prev_page_next_index = index - page_size
+            if prev_page_next_index < 0:
+                # If the previous page is out of range, return an empty dictionary
+                return {}
+        return {
+            "index": index,
+            "next_index": index + page_size,
+            "page_size": page_size,
+            "data": list(dataset.values())[prev_page_next_index:index]
+        }
