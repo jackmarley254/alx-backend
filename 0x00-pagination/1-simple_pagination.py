@@ -1,4 +1,11 @@
+#!/usr/bin/env python3
+"""
+Defines class Server that paginates a database of popular baby names
+"""
+import csv
+import math
 from typing import List, Tuple
+
 
 class Server:
     """Server class to paginate a database of popular baby names.
@@ -18,6 +25,7 @@ class Server:
             self.__dataset = dataset[1:]
 
         return self.__dataset
+
 
     def index_range(self, page: int, page_size: int) -> Tuple[int, int]:
         """
