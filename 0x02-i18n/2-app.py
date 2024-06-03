@@ -8,7 +8,6 @@ from flask import (
     request
 )
 from flask_babel import Babel
-#from flask_babel_ex import Babel
 
 
 class Config(object):
